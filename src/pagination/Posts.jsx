@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function Posts({ posts , loading }) {
+export default function Posts({ posts , load }) {
 
-    if(loading){
+    if(load){
         return <h2>Loading...</h2>
     }
 
   return (
-    <ul className='list-group mb-4'>
+    <ul className='ul'>
       {posts.map(post=>(
-        <li className='border mt-3 p-3'
+        <li className='list'
          key={post.id}>
-            <h3>{post.title}</h3>
+            <h3> {post.id} {post.title}</h3>
             <p>{post.body}</p>
         </li>
       ))}
